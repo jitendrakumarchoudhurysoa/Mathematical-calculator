@@ -1,0 +1,95 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calculator wrapper */
+.calculator {
+  background-color: #1e1e2f;
+  border-radius: 15px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.calculator:hover {
+  transform: scale(1.02);
+}
+
+/* Display */
+.display {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-height: 60px;
+  overflow: hidden;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Base button */
+.btn {
+  font-size: 1.4rem;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Input buttons: numbers and operators */
+.btn-input {
+  background-color: #2e2e3a;
+  color: #fff;
+}
+
+.btn-input:active {
+  transform: scale(0.95);
+  background-color: #404056;
+}
+
+/* Special buttons */
+.clear {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.clear:active {
+  background-color: #c0392b;
+}
+
+.equal {
+  background-color: #27ae60;
+  grid-row: span 2;
+  color: white;
+}
+
+.equal:active {
+  background-color: #219150;
+}
+
+/* Zero button spans 2 columns */
+#zero {
+  grid-column: span 2;
+}
